@@ -7,9 +7,7 @@
       "customAuth": false,
       "frontendAuthConfig": {
         "socialProviders": [],
-        "usernameAttributes": [
-          "EMAIL"
-        ],
+        "usernameAttributes": [],
         "signupAttributes": [],
         "passwordProtectionSettings": {
           "passwordPolicyMinLength": 8,
@@ -28,6 +26,13 @@
           "EMAIL"
         ]
       }
+    }
+  },
+  "storage": {
+    "s3amplifyappstorage": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": []
     }
   }
 }

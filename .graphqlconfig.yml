@@ -13,3 +13,6 @@ projects:
         region: eu-west-2
         apiId: ob2ayl434rbergyryjk57zr64u
         maxDepth: 2
+extensions:
+  amplify:
+    version: 3

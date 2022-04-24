@@ -2,8 +2,8 @@
   "version": "1",
   "cognitoConfig": {
     "identityPoolName": "testAuthIdentityPool",
-    "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "amplif48012e0c",
+    "allowUnauthenticatedIdentities": true,
+    "resourceNameTruncated": "amplif70ad41b5",
     "userPoolName": "amplifyapp",
     "autoVerifiedAttributes": [
       "email"
@@ -30,15 +30,12 @@
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [],
     "userpoolClientReadAttributes": [],
-    "userpoolClientLambdaRole": "amplif48012e0c_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "amplif70ad41b5_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "48012e0c",
+    "sharedId": "70ad41b5",
     "resourceName": "amplifyapp",
     "authSelections": "identityPoolAndUserPool",
     "serviceName": "Cognito",
-    "usernameAttributes": [
-      "email"
-    ],
     "useDefault": "manual",
     "userPoolGroups": false,
     "userPoolGroupList": [],
@@ -46,6 +43,20 @@
     "thirdPartyAuth": false,
     "authProviders": [],
     "usernameCaseSensitive": false,
-    "useEnabledMfas": true
+    "useEnabledMfas": true,
+    "authRoleArn": {
+      "Fn::GetAtt": [
+        "AuthRole",
+        "Arn"
+      ]
+    },
+    "unauthRoleArn": {
+      "Fn::GetAtt": [
+        "UnauthRole",
+        "Arn"
+      ]
+    },
+    "breakCircularDependency": true,
+    "dependsOn": []
   }
 }
